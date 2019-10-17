@@ -956,10 +956,14 @@ definitions:
           \ cursus. Maecenas congue dictum consectetur. Fusce in nibh ut mi consectetur\
           \ pretium. "
         tags:
-        - imageUrl: "http://tny.im/jA-"
+        - imageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
           label: "Historical Building"
-        - imageUrl: "http://tny.im/jA-"
-          label: "Historical Building"
+        - imageUrl: "https://unsplash.com/photos/KX_HvSO-JlE"
+          label: "Coffee"
+        - imageUrl: "https://unsplash.com/photos/6SMF42-JTAc"
+          label: "Donut"
+        - imageUrl: "https://unsplash.com/photos/WXJ33HOrzvE"
+          label: "Wifi"
       locationInfo:
         address: "Jalan S Parman Kav 77, Slipi, Jakarta Barat."
         geoLocation:
@@ -983,33 +987,56 @@ definitions:
         status: "PERMANENTLY_CLOSED"
       mainDish: "Fried Chicken"
       mainRestaurantType: "Casual Dining"
-
       phoneNumbers:
-      - "phoneNumbers"
-      - "phoneNumbers"
+      - "08123 456 789"
+      - "08987 654 321"
       restaurantTypes:
       - "restaurantTypes"
       - "restaurantTypes"
       poiPhotosList:
-      - "imageUrlList"
-      - "imageUrlList"
+      - "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?cs=srgb&dl=appetizer-bowl-delicious-1640772.jpg&fm=jpg"
+      - "https://unsplash.com/photos/4_jhDO54BYg"
       featureFacilities:
-      - iconImageUrl: "http://tny.im/jA-"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
         available: true
         label: "Air Conditioned"
-      - iconImageUrl: "http://tny.im/jA-"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+        available: true
+        label: "Good Toilet"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+        available: true
+        label: "Excellent service"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+        available: true
+        label: "Hot Water"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+        available: true
+        label: "Air Conditioned"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
         available: true
         label: "Air Conditioned"
       price:
         priceDetail: "price for 1 dish + 1 beverages"
         priceLabel: "Around Rp 100.000 per person"
       paymentMethods:
-      - iconImageUrl: "http://tny.im/jA-"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
         available: true
-        label: "Air Conditioned"
-      - iconImageUrl: "http://tny.im/jA-"
+        label: "Bank"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
         available: true
-        label: "Air Conditioned"
+        label: "Cash"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+        available: true
+        label: "Debit"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+        available: true
+        label: "Credit"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+        available: true
+        label: "Check"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+        available: true
+        label: "E-Money"
       name: "Chir Chir fusion Chicken"
       id: "123"
       openHourToday:
@@ -1030,10 +1057,13 @@ definitions:
         isToday: false
         closed: false
       highlightedFeatureFacilities:
-      - iconImageUrl: "http://tny.im/jA-"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
         available: true
         label: "Air Conditioned"
-      - iconImageUrl: "http://tny.im/jA-"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+        available: true
+        label: "Air Conditioned"
+      - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
         available: true
         label: "Air Conditioned"
   POIRequestData:
@@ -1075,7 +1105,7 @@ definitions:
               minutes: 0
           isToday: false
           closed: false
-        - weekDay: "SUNDAY"
+        - weekDay: "MONDAY"
           operationHours:
           - closeTime:
               hour: 7
@@ -1090,7 +1120,23 @@ definitions:
               hour: 7
               minutes: 0
           isToday: false
-          closed: false
+          closed: true
+        - weekDay: "Tuesday"
+          operationHours:
+          - closeTime:
+              hour: 7
+              minutes: 0
+            openTime:
+              hour: 7
+              minutes: 0
+          - closeTime:
+              hour: 7
+              minutes: 0
+            openTime:
+              hour: 7
+              minutes: 0
+            isToday: true
+            closed: false
         bestKnownFor:
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas\
             \ eu eros ac massa interdum mattis. Integer feugiat tortor sit amet ligula\
@@ -1098,10 +1144,14 @@ definitions:
             \ gravida cursus. Maecenas congue dictum consectetur. Fusce in nibh ut\
             \ mi consectetur pretium. "
           tags:
-          - imageUrl: "http://tny.im/jA-"
+          - imageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
             label: "Historical Building"
-          - imageUrl: "http://tny.im/jA-"
-            label: "Historical Building"
+          - imageUrl: "https://unsplash.com/photos/KX_HvSO-JlE"
+            label: "Coffee"
+          - imageUrl: "https://unsplash.com/photos/6SMF42-JTAc"
+            label: "Donut"
+          - imageUrl: "https://unsplash.com/photos/WXJ33HOrzvE"
+            label: "Wifi"
         locationInfo:
           address: "Jalan S Parman Kav 77, Slipi, Jakarta Barat."
           geoLocation:
@@ -1110,12 +1160,32 @@ definitions:
           label: "PIK Avenue, 2nd Floor"
         restaurantNearbies:
         - restaurantType: "Western"
-          imageUrl: "http://tny.im/jA-"
+          imageUrl: "https://media.timeout.com/images/105239239/1372/772/image.jpg"
           name: "Bereau Cafe"
           locationLabel: "Central Park, Slipi"
           id: "123"
         - restaurantType: "Western"
-          imageUrl: "http://tny.im/jA-"
+          imageUrl: "https://media.timeout.com/images/105239239/1372/772/image.jpg"
+          name: "Bereau Cafe"
+          locationLabel: "Central Park, Slipi"
+          id: "123"
+        - restaurantType: "Western"
+          imageUrl: "https://media.timeout.com/images/105239239/1372/772/image.jpg"
+          name: "Bereau Cafe"
+          locationLabel: "Central Park, Slipi"
+          id: "123"
+        - restaurantType: "Western"
+          imageUrl: "https://media.timeout.com/images/105239239/1372/772/image.jpg"
+          name: "Bereau Cafe"
+          locationLabel: "Central Park, Slipi"
+          id: "123"
+        - restaurantType: "Western"
+          imageUrl: "https://media.timeout.com/images/105239239/1372/772/image.jpg"
+          name: "Bereau Cafe"
+          locationLabel: "Central Park, Slipi"
+          id: "123"
+        - restaurantType: "Western"
+          imageUrl: "https://media.timeout.com/images/105239239/1372/772/image.jpg"
           name: "Bereau Cafe"
           locationLabel: "Central Park, Slipi"
           id: "123"
@@ -1128,7 +1198,31 @@ definitions:
         photo:
           tab: "ALL"
           photos:
+          - imageUrl: "https://media.timeout.com/images/105239239/1372/772/image.jpg"
+            category: "AMBIENCE"
+            mainSubcategory: "Indoor seating"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
           - imageUrl: "http://tny.im/jA-"
+            category: "AMBIENCE"
+            mainSubcategory: "Indoor seating"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
+          - imageUrl: "https://media.timeout.com/images/105239239/1372/772/image.jpg"
+            category: "AMBIENCE"
+            mainSubcategory: "Indoor seating"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
+          - imageUrl: "http://tny.im/jA-"
+            category: "AMBIENCE"
+            mainSubcategory: "Indoor seating"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
+          - imageUrl: "https://media.timeout.com/images/105239239/1372/772/image.jpg"
             category: "AMBIENCE"
             mainSubcategory: "Indoor seating"
             subcategories:
@@ -1141,31 +1235,57 @@ definitions:
             - "subcategories"
             - "subcategories"
         phoneNumbers:
-        - "phoneNumbers"
-        - "phoneNumbers"
+        - "08123 456 789"
+        - "08987 654 321"
         restaurantTypes:
         - "restaurantTypes"
         - "restaurantTypes"
+        - "Glamour"
+        - "Medieval"
         poiPhotosList:
-        - "imageUrlList"
-        - "imageUrlList"
+        - "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?cs=srgb&dl=appetizer-bowl-delicious-1640772.jpg&fm=jpg"
+        - "https://unsplash.com/photos/4_jhDO54BYg"
         featureFacilities:
-        - iconImageUrl: "http://tny.im/jA-"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
           available: true
           label: "Air Conditioned"
-        - iconImageUrl: "http://tny.im/jA-"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+          available: true
+          label: "Good Toilet"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+          available: true
+          label: "Excellent service"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+          available: true
+          label: "Hot Water"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+          available: true
+          label: "Air Conditioned"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
           available: true
           label: "Air Conditioned"
         price:
           priceDetail: "price for 1 dish + 1 beverages"
           priceLabel: "Around Rp 100.000 per person"
         paymentMethods:
-        - iconImageUrl: "http://tny.im/jA-"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
           available: true
-          label: "Air Conditioned"
-        - iconImageUrl: "http://tny.im/jA-"
+          label: "Bank"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
           available: true
-          label: "Air Conditioned"
+          label: "Cash"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+          available: true
+          label: "Debit"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+          available: true
+          label: "Credit"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+          available: true
+          label: "Check"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+          available: true
+          label: "E-Money"
         name: "Chir Chir fusion Chicken"
         id: "123"
         openHourToday:
@@ -1186,22 +1306,37 @@ definitions:
           isToday: false
           closed: false
         highlightedFeatureFacilities:
-        - iconImageUrl: "http://tny.im/jA-"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
           available: true
           label: "Air Conditioned"
-        - iconImageUrl: "http://tny.im/jA-"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
+          available: true
+          label: "Air Conditioned"
+        - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
           available: true
           label: "Air Conditioned"
         menu:
           tab: "Menu"
           photos:
-          - imageUrl: "http://tny.im/jA-"
+          - imageUrl: "https://image.freepik.com/free-vector/simple-restaurant-menu_23-2147652804.jpg"
             category: "AMBIENCE"
             mainSubcategory: "Indoor seating"
             subcategories:
             - "subcategories"
             - "subcategories"
-          - imageUrl: "http://tny.im/jA-"
+          - imageUrl: "https://image.freepik.com/free-vector/simple-restaurant-menu_23-2147652804.jpg"
+            category: "AMBIENCE"
+            mainSubcategory: "Indoor seating"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
+          - imageUrl: "https://image.freepik.com/free-vector/simple-restaurant-menu_23-2147652804.jpg"
+            category: "AMBIENCE"
+            mainSubcategory: "Indoor seating"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
+          - imageUrl: "https://image.freepik.com/free-vector/simple-restaurant-menu_23-2147652804.jpg"
             category: "AMBIENCE"
             mainSubcategory: "Indoor seating"
             subcategories:
@@ -1210,6 +1345,8 @@ definitions:
         cuisineDishTypes:
         - "cuisineDishTypes"
         - "cuisineDishTypes"
+        - "Hamburger"
+        - "Salad"
       context:
         session: "session"
   POIRequest:
