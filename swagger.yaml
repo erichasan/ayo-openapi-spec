@@ -1247,11 +1247,11 @@ definitions:
         - "https://unsplash.com/photos/4_jhDO54BYg"
         featureFacilities:
         - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
-          available: true
+          available: false
           label: "Air Conditioned"
         - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
           available: true
-          label: "Good Toilet"
+          label: "Capacity: 100 people"
         - iconImageUrl: "https://unsplash.com/photos/Yc5sL-ejk6U"
           available: true
           label: "Excellent service"
