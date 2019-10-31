@@ -1867,6 +1867,86 @@ definitions:
         $ref: "#/definitions/AvailableFilterData"
       context:
         $ref: "#/definitions/ContextResponse"
+    example:
+      data:
+        filterSpec:
+          quickFilters:
+          - id: "open_24_hours"
+            label: "Open 24 Hours"
+          - id: "open_now"
+            label: "Open Now" 
+          - id: "trending"
+            label: "Trending"
+          - id: "new"
+            label: "New"
+          - id: "ig_able"
+            label: "Instagrammable"
+          ratings:
+          - id: "3+"
+            label: "3+"
+          - id: "4+"
+            label: "4+"
+          prices:
+            minPrice:
+              currency: "IDR"
+              amount: 10000
+              numOfDecimalPoint: 0
+            maxPrice:
+              currency: "IDR"
+              amount: 120000
+              numOfDecimalPoint: 0
+          types:
+          - id: "3+"
+            label: "3+"
+          - id: "4+"
+            label: "4+"
+          dishes:
+          - id: "curry"
+            label: "Curry"
+          - id: "Noodles"
+            label: "Noodles"
+          - id: "bakwan"
+            label: "Bakwan"
+          - id: "soto"
+            label: "Soto"
+          - id: "naan"
+            label: "Naan Bread"
+          cuisines:
+          - id: "indonesia"
+            label: "Indonesia"
+          - id: "japanese"
+            label: "Japanese"
+          - id: "korean"
+            label: "Korean"
+          - id: "western"
+            label: "Western"
+          dietaries:
+          - id: "vegetarian"
+            label: "Vegetarian"
+          - id: "vegan"
+            label: "Vegan"
+          - id: "no_pork"
+            label: "No Pork"
+          - id: "halal"
+            label: "Halal Certified by MUI"
+          facilities:
+          - id: "wheelchair"
+            label: "Wheelchair"
+          - id: "toilet"
+            label: "Toilet"
+          - id: "praying_room"
+            label: "Praying Room"
+        sortSpec:
+        - id: "popularity"
+          label: "Popularity"
+        - id: "lowest"
+          label: "Price: Lowest to Highest"
+        - id: "highest"
+          label: "Price: Highest to Lowest"
+        - id: "nearby"
+          label: "Nearest from me"
+      context:
+        session: "session"
   AvailableFilterData:
     type: "object"
     required:
@@ -1966,6 +2046,92 @@ definitions:
         $ref: "#/definitions/SearchResultDataResponse"
       context:
         $ref: "#/definitions/ContextResponse"
+    example:
+      data:
+        restaurantList:
+        - id: "123123"
+          name: "Healthy Kitchen by Julius V"
+          mainType: "Casual Dining"
+          mainCuisine: "Vegetarian"
+          mainDish: "Capcay"
+          imageList:
+          - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOlYNiyDQ7SV-RkW6J1u_H9PH3lIY1acMD7mSdt5FN8fl5US5t"
+          - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRWYOIXVPIcxuRJDq_BRu-GWh1ru_4LW-NOFE60VJIFAk84obFx"
+          status: "OPEN"
+          openTime: "09.00 - 21.00 (Thu)"
+          price:
+            priceDetail: "price for 1 dish + 1 beverages"
+            priceLabel: "Around Rp 100.000 per person"
+          distance: 0.7
+          address: "Senopati, Jakarta Selatan"
+          menu: 
+            - imagerUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKZolakgBBi8uWDRlsDANrm4yFy93CSn1cjnTMWwxCVW_A_WYZ"
+              category: "Menu"
+              mainSubcategory: "Menu"
+            - imagerUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRqAetS2BpCXNYiM2XeAldABn54PbjdTkV_K7-bmodJm4J3ZC4X"
+              category: "Menu"
+              mainSubcategory: "Menu Ke 2"
+              subcategories: 
+              - "Menu Andalan"
+              - "Menu Menu disini"    
+          label:
+          - "Trending"
+          - "New" 
+        - id: "123123"
+          name: "KFC"
+          mainType: "Fast Food"
+          mainCuisine: "Fried Chicken"
+          imageList:
+          - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfVsuVJw7DZIf-zGQoWoMhiecir2VBFGfP-ojaN78bEx4AKaBs"
+          status: "PERMANENTLY_CLOSED"
+          price:
+            priceDetail: "price for 1 dish + 1 beverages"
+            priceLabel: "Around Rp 70.000 per person"
+          address: "Senopati, Jakarta Selatan"
+          menu: 
+            - imagerUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKZolakgBBi8uWDRlsDANrm4yFy93CSn1cjnTMWwxCVW_A_WYZ"
+              category: "Menu"
+              mainSubcategory: "Menu"
+            - imagerUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRqAetS2BpCXNYiM2XeAldABn54PbjdTkV_K7-bmodJm4J3ZC4X"
+              category: "Menu"
+              mainSubcategory: "Menu Ke 2"
+        - id: "123123"
+          name: "MCD Kebon Jeruk"
+          mainType: "Vegan"
+          mainCuisine: "Vegetarian"
+          mainDish: "Capcay"
+          imageList:
+          - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2yAVZr-gu2V4ZC-v51-1Y_DBo5t5Rcg5KrKatnERXYJHylEnB"
+          - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2yAVZr-gu2V4ZC-v51-1Y_DBo5t5Rcg5KrKatnERXYJHylEnB"
+          - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2yAVZr-gu2V4ZC-v51-1Y_DBo5t5Rcg5KrKatnERXYJHylEnB"
+          - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2yAVZr-gu2V4ZC-v51-1Y_DBo5t5Rcg5KrKatnERXYJHylEnB"
+          status: "CLOSED"
+          openTime: "09.00 - 21.00 (Thu)"
+          price:
+            priceDetail: "price for 1 dish + 1 beverages"
+            priceLabel: "Around Rp 2.000.000 per person"
+          distance: 0.1
+          address: "Teluk Gong, Jakarta, Indonesia"  
+          label:
+          - "New" 
+        - id: "123123"
+          name: "BOBA TERENAK"
+          mainType: "Boba"
+          mainCuisine: "Boba"
+          status: "TEMPORARY_CLOSED"
+          price:
+            priceDetail: "price for 1 dish + 1 beverages"
+            priceLabel: "Around Rp 30.000 per person"
+          address: "Menara Citicon"
+          menu: 
+            - imagerUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRqAetS2BpCXNYiM2XeAldABn54PbjdTkV_K7-bmodJm4J3ZC4X"
+              category: "Menu"
+              mainSubcategory: "Menu Ke 2"
+              subcategories: 
+              - "Menu Andalan"
+              - "Menu Menu disini"
+      context:
+        session: "session"
   SearchResultDataResponse:
     type: "object"
     required:
