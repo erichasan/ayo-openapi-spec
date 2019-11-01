@@ -1777,6 +1777,11 @@ definitions:
         $ref: "#/definitions/ContextRequest"
   SearchResultRequestData:
     type: "object"
+    required: 
+      - "filter"
+      - "sort"
+      - "skip"
+      - "limit"
     properties:
       geoDisplay: 
         $ref: "#/definitions/GeoDisplay"
