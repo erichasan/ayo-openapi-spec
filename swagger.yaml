@@ -1346,6 +1346,18 @@ definitions:
             subcategories:
             - "subcategories"
             - "subcategories"
+          - imageUrl: "http://tny.im/jA-"
+            category: "AMBIENCE"
+            mainSubcategory: "Smooking Area"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
+          - imageUrl: "http://tny.im/jA-"
+            category: "AMBIENCE"
+            mainSubcategory: "Meeting Room"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
       menu:
           tab: "Menu"
           photos:
@@ -1358,6 +1370,18 @@ definitions:
           - imageUrl: "http://tny.im/jA-"
             category: "AMBIENCE"
             mainSubcategory: "Indoor seating"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
+          - imageUrl: "http://tny.im/jA-"
+            category: "AMBIENCE"
+            mainSubcategory: "Smooking Area"
+            subcategories:
+            - "subcategories"
+            - "subcategories"
+          - imageUrl: "http://tny.im/jA-"
+            category: "AMBIENCE"
+            mainSubcategory: "Meeting Room"
             subcategories:
             - "subcategories"
             - "subcategories"
@@ -2395,6 +2419,9 @@ definitions:
           restaurantName:
             type: "string"
             example: "Chir Chir Korean Fusion Chicken"
+          restaurantImage:
+            type: "string"
+            example: "http://tny.im/jA-"
           highlightedLocation:
             type: "string"
             example: "PIK Jakarta"
