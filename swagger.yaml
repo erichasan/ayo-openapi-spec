@@ -645,9 +645,6 @@ definitions:
       session: "session"
   HomePageRequestData:
     type: "object"
-    required:
-    - "geoDisplay"
-    - "geoLocation"
     properties:
       geoDisplay:
         $ref: "#/definitions/GeoDisplay"
@@ -1780,9 +1777,6 @@ definitions:
         $ref: "#/definitions/ContextRequest"
   SearchResultRequestData:
     type: "object"
-    required: 
-      - "geoDisplay"
-      - "geoLocation"
     properties:
       geoDisplay: 
         $ref: "#/definitions/GeoDisplay"
