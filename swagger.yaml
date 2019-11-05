@@ -2436,7 +2436,7 @@ definitions:
         restaurantName: "Chir Chir Korean Fusion Chicken"
         highlightedLocation: "PIK Jakarta"
         galleryItems:
-        - category: "Food"
+        - category: "FOOD"
           subCategories: 
           - "Chicken Wings"
           - "Toppoki"
@@ -2448,7 +2448,7 @@ definitions:
             subcategories:
             - "Toppoki"
             - "Cheese"
-        - category: "Ambience"
+        - category: "AMBIENCE"
           subCategories: 
           - "Indoor"
           - "Outer"
@@ -2475,6 +2475,12 @@ definitions:
       category:
         type: "string"
         example: "FOOD"
+        enum:
+        - "ALL"
+        - "FOOD"
+        - "MENU"
+        - "AMBIENCE"
+        - "OUTSIDE"
       subCategories:
         type: "array"
         items:
@@ -2484,7 +2490,7 @@ definitions:
         items:
           $ref: "#/definitions/Photo"
     example:
-      category: "Food"
+      category: "FOOD"
       subCategories: 
       - "Chicken Wings"
       - "Toppoki"
