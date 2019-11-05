@@ -317,6 +317,53 @@ paths:
             $ref: "#/definitions/GalleryResponse"
         400:
           description: "Invalide  query"
+  /user/session:
+    post:
+      tags:
+      - "Session Management"
+      summary: "getContextAPI"
+      description: "Get session token"
+      operationId: "getContextAPI"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: ""
+        required: true
+        schema:
+          $ref: "#/definitions/GetContextAPIRequest"
+      responses:
+        200:
+          description: "successful operaton"
+          schema:
+            $ref: "#/definitions/GetContextAPIResponse"
+        403:
+          description: |
+            Not authorized error. This error can happen in all API that require authorization.
+
+            Action that need to be done by FE is defined by action field 
+            * LOG_OUT - User is logged out
+            * RENEW_SESSION_TOKEN - Session token is expired and needs to be renewed by calling getContextAPI
+            * SYNC_TIME - FE time is skewing too much compared to backend time (for now it's more thatn 48 hours). Ask User to sync the time
+          schema:
+            $ref: "#/definitions/GetContextAPIResponseNotAuthorized"  
+        500:
+          description: |
+            Common error when server is error. This format follows current traveloka standard.
+
+            Valid errorType values
+            * BAD_REQUEST,
+            * API_CALL_NO_LONGER_SUPPORTED,
+            * UNDER_MAINTENANCE,
+            * SERVER_ERROR,
+            * NOT_AUTHORIZED
+
+            NOTES: please don't use userErrorMessage or errorMessage directly because BE doesn't handle translation in those messages.
+          schema: 
+            $ref: "#/definitions/ServerErrorResponse"        
 definitions:
   GeoDisplay:
     type: "object"
@@ -2608,3 +2655,86 @@ definitions:
       context:
         session: "session"
         clientInterface: "clientInterface"
+  GetContextAPIRequest:
+    type: "object"
+    required:
+    properties:
+      data:
+        $ref: "#/definitions/GetContextAPIRequestData"
+      context:
+        $ref: "#/definitions/ContextRequest"  
+  GetContextAPIRequestData:
+    type: "object"
+    properties:
+      refreshToken:
+        type: "string"
+        example: "ASKJDisjidKJiJKD"
+      deviceInformation:
+        type: "object"
+        $ref: "#/definitions/DeviceInformation"
+      timestamp:
+        type: "integer" 
+        format: "int64"
+        description: timestamp in form seconds since epoch
+        example: 210901290
+      securityKey:
+        type: "string"
+        example: "DKSJKJDSKI9898"  
+  DeviceInformation:
+    type: "object"
+    properties:
+      platform:
+        type: "string"
+        example: "android"
+      version:
+        type: "string"
+        example: "1.0.0"
+  GetContextAPIResponse:  
+    type: "object"
+    properties:
+      context:
+        type: object
+        $ref: "#/definitions/ContextResponse"
+      data:
+        type: object
+        $ref: "#/definitions/GetContextAPIResponseData" 
+  GetContextAPIResponseData:
+    type: "object"      
+    properties:
+      refreshToken:
+        type: "string"
+        example: "SJKDSIU(##@#7878821"
+      sessionToken:
+        type: "string"
+        example: "ADDS730921=="
+      sessionExpirationTime:
+        type: "int"
+        format: "int64"  
+        example: 212210909032
+  GetContextAPIResponseNotAuthorized:  
+    type: "object"
+    properties:
+      errorType:
+        type: "string"
+        example: "NOT_AUTHORIZED"
+      errorMessage:
+        type: "string"
+        example: "User is not authorized."
+      userErrorMessage:
+        type: "string"
+        example: "Please login to access this feature."
+      action:
+        type: "string"
+        example: "SYNC_TIME"  
+  ServerErrorResponse:  
+    type: "object"
+    properties:
+      errorType:
+        type: "string"
+        example: "SERVER"
+      errorMessage:
+        type: "string"
+        example: "Exception occurred in server."
+      userErrorMessage:
+        type: "string"
+        example: "Unexpected server error occurred. We apologize for the inconvenience. Please try again later."      
