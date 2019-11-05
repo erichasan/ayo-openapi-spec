@@ -2732,4 +2732,3 @@ definitions:
       userErrorMessage:
         type: "string"
         example: "Unexpected server error occurred. We apologize for the inconvenience. Please try again later."      
-                    
