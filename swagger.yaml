@@ -2118,6 +2118,10 @@ definitions:
         $ref: "#/definitions/ContextResponse"
     example:
       data:
+        geoDisplay:
+          name: "Jakarta"
+          locationType: "GEO"
+          id: 0
         restaurantList:
         - id: "123123"
           name: "Healthy Kitchen by Julius V"
@@ -2127,8 +2131,26 @@ definitions:
           imageList:
           - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOlYNiyDQ7SV-RkW6J1u_H9PH3lIY1acMD7mSdt5FN8fl5US5t"
           - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRWYOIXVPIcxuRJDq_BRu-GWh1ru_4LW-NOFE60VJIFAk84obFx"
-          status: "OPEN"
-          openTime: "09.00 - 21.00 (Thu)"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "COMING_SOON"
+          openHourToday:
+            weekDay: "SUNDAY"
+            operationHours:
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            isToday: false
+            closed: false
           price:
             priceDetail: "price for 1 dish + 1 beverages"
             priceLabel: "Around Rp 100.000 per person"
@@ -2153,7 +2175,9 @@ definitions:
           mainCuisine: "Fried Chicken"
           imageList:
           - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfVsuVJw7DZIf-zGQoWoMhiecir2VBFGfP-ojaN78bEx4AKaBs"
-          status: "PERMANENTLY_CLOSED"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "PERMANENTLY_CLOSED"
           price:
             priceDetail: "price for 1 dish + 1 beverages"
             priceLabel: "Around Rp 70.000 per person"
@@ -2175,8 +2199,26 @@ definitions:
           - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2yAVZr-gu2V4ZC-v51-1Y_DBo5t5Rcg5KrKatnERXYJHylEnB"
           - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2yAVZr-gu2V4ZC-v51-1Y_DBo5t5Rcg5KrKatnERXYJHylEnB"
           - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2yAVZr-gu2V4ZC-v51-1Y_DBo5t5Rcg5KrKatnERXYJHylEnB"
-          status: "CLOSED"
-          openTime: "09.00 - 21.00 (Thu)"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "CLOSED_NOW"
+          openHourToday:
+            weekDay: "SUNDAY"
+            operationHours:
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            isToday: false
+            closed: false
           price:
             priceDetail: "price for 1 dish + 1 beverages"
             priceLabel: "Around Rp 2.000.000 per person"
@@ -2188,7 +2230,44 @@ definitions:
           name: "BOBA TERENAK"
           mainType: "Boba"
           mainCuisine: "Boba"
-          status: "TEMPORARY_CLOSED"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "OPEN_NOW"
+          openHourToday:
+            weekDay: "SUNDAY"
+            operationHours:
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            isToday: false
+            closed: false
+          price:
+            priceDetail: "price for 1 dish + 1 beverages"
+            priceLabel: "Around Rp 30.000 per person"
+          address: "Menara Citicon"
+          menu: 
+            - imagerUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRqAetS2BpCXNYiM2XeAldABn54PbjdTkV_K7-bmodJm4J3ZC4X"
+              category: "Menu"
+              mainSubcategory: "Menu Ke 2"
+              subcategories: 
+              - "Menu Andalan"
+              - "Menu Menu disini"
+        - id: "909090"
+          name: "RestaurantEmpty"
+          mainType: "None"
+          mainCuisine: "None"
+          poiStatus:
+            statusLabel: ""
+            status: "NO_OPEN_HOUR"
           price:
             priceDetail: "price for 1 dish + 1 beverages"
             priceLabel: "Around Rp 30.000 per person"
@@ -2205,8 +2284,11 @@ definitions:
   SearchResultDataResponse:
     type: "object"
     required:
+    - "geoDisplay"
     - "restaurantList"
     properties:
+      geoDisplay:
+        $ref: "#/definitions/GeoDisplay"
       restaurantList:
         type: "array"
         items:
@@ -2219,7 +2301,8 @@ definitions:
     - "mainType"
     - "mainCuisine"
     - "address"
-    - "status"
+    - "poiStatus"
+    - "openHourToday"
     properties:
       id:
         type: "string"
@@ -2236,19 +2319,10 @@ definitions:
         type: "array"
         items:
           type: "string"
-      status:
-        type: "string"
-        example: "PERMANENTLY_CLOSED"
-        enum:
-        - "OPEN"
-        - "CLOSED"
-        - "TEMPORARY_CLOSED"
-        - "COMING_SOON"
-        - "PERMANENTLY_CLOSED"
-        - "NO_OPEN_HOUR"
-      openTime:
-        type: "string"
-        example: "09.00 - 17.00 (Thu)"
+      poiStatus:
+        $ref: "#/definitions/POIStatus"
+      openHourToday:
+        $ref: "#/definitions/OpenHour"
       price:
         $ref: "#/definitions/Price"
       distance:
@@ -2277,8 +2351,26 @@ definitions:
       - "http://tny.im/jA-"
       - "http://tny.im/jA-"
       - "http://tny.im/jA-"
-      status: "OPEN"
-      openTime: "09.00 - 21.00 (Thu)"
+      poiStatus:
+        statusLabel: "Opening again at 11 dec 2019"
+        status: "PERMANENTLY_CLOSED"
+      openHourToday:
+        weekDay: "SUNDAY"
+        operationHours:
+        - closeTime:
+            hour: 7
+            minutes: 0
+          openTime:
+            hour: 7
+            minutes: 0
+        - closeTime:
+            hour: 7
+            minutes: 0
+          openTime:
+            hour: 7
+            minutes: 0
+        isToday: false
+        closed: false
       price:
         priceDetail: "price for 1 dish + 1 beverages"
         priceLabel: "Around Rp 100.000 per person"
@@ -2577,12 +2669,120 @@ definitions:
     properties:
       data:
         properties:
+          geoDisplay:
+            $ref: "#/definitions/GeoDisplay"
           sections:
             type: "array"
             items:
               $ref: "#/definitions/GlossarySectionItem"
       context:
         $ref: "#/definitions/ContextResponse"
+    example:
+      geoDisplay:
+        name: "Bogor"
+        locationType: "GEO"
+        id: 1
+      sections:
+      - name: "Italian"
+        items:
+        - imageUrl: ""
+          filter:
+            quickFilters:
+            - "filter"
+            - "filter"
+            ratings:
+            - "filter"
+            - "filter"
+            prices:
+              minPrice:
+                currency: "IDR"
+                amount: 100000
+                numOfDecimalPoint: 0
+              maxPrice: 
+                currency: "IDR"
+                amount: 100000
+                numOfDecimalPoint: 0      
+            types:
+            - "filter"
+            - "filter"
+            cuisines:
+            - "filter"
+            - "filter"
+            dishes:
+            - "filter"
+            - "filter"
+            dietaries:
+            - "filter"
+            - "filter"
+            facilities:
+            - "filter"
+            - "filter"
+        - imageUrl: ""
+          filter:
+            quickFilters:
+            - "filter"
+            - "filter"
+            ratings:
+            - "filter"
+            - "filter"
+            prices:
+              minPrice:
+                currency: "IDR"
+                amount: 100000
+                numOfDecimalPoint: 0
+              maxPrice: 
+                currency: "IDR"
+                amount: 100000
+                numOfDecimalPoint: 0      
+            types:
+            - "filter"
+            - "filter"
+            cuisines:
+            - "filter"
+            - "filter"
+            dishes:
+            - "filter"
+            - "filter"
+            dietaries:
+            - "filter"
+            - "filter"
+            facilities:
+            - "filter"
+            - "filter"
+      - name: "Indonesian"
+        items:
+        - imageUrl: ""
+          filter:
+            quickFilters:
+            - "filter"
+            - "filter"
+            ratings:
+            - "filter"
+            - "filter"
+            prices:
+              minPrice:
+                currency: "IDR"
+                amount: 100000
+                numOfDecimalPoint: 0
+              maxPrice: 
+                currency: "IDR"
+                amount: 100000
+                numOfDecimalPoint: 0      
+            types:
+            - "filter"
+            - "filter"
+            cuisines:
+            - "filter"
+            - "filter"
+            dishes:
+            - "filter"
+            - "filter"
+            dietaries:
+            - "filter"
+            - "filter"
+            facilities:
+            - "filter"
+            - "filter"
   GlossarySectionItem:
     type: "object"
     required:
