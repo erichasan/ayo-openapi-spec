@@ -1713,85 +1713,151 @@ definitions:
           branchName: "Slipi Kemanggisan"
           distance: 0.7
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "PERMANENTLY_CLOSED"
+          openHourToday:
+            weekDay: "SUNDAY"
+            operationHours:
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            isToday: false
+            closed: false
         - id: "123"
           chainName: "KFC"
           branchName: "Palmerah, Jakarta"
           distance: 0.3
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "PERMANENTLY_CLOSED"
+          openHourToday:
+            weekDay: "SUNDAY"
+            operationHours:
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            isToday: false
+            closed: false
         - id: "123"
           chainName: "KFC"
           branchName: "Kuningan, Jakarta"
           distance: 0.7
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "PERMANENTLY_CLOSED"
+          openHourToday:
+            weekDay: "SUNDAY"
+            operationHours:
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            isToday: false
+            closed: false
         - id: "123"
           chainName: "KFC"
           branchName: "Monas, Jakarta"
           distance: 0.7
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "PERMANENTLY_CLOSED"
+          openHourToday:
+            weekDay: "SUNDAY"
+            operationHours:
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            isToday: false
+            closed: false
         - id: "123"
           chainName: "KFC"
           branchName: "Cental Park, Jakarta"
           distance: 0.7
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "PERMANENTLY_CLOSED"
+          openHourToday:
+            weekDay: "SUNDAY"
+            operationHours:
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            isToday: false
+            closed: false
         - id: "123"
           chainName: "KFC"
           branchName: "Gandaria City, Jakarta"
           distance: 0.7
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
-        - id: "123"
-          chainName: "KFC"
-          branchName: "Pondok Indah, Jakarta"
-          distance: 0.7
-          address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
-        - id: "123"
-          chainName: "KFC"
-          branchName: "Slipi Kemanggisan"
-          distance: 0.7
-          address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
-        - id: "123"
-          chainName: "KFC"
-          branchName: "Slipi Kemanggisan"
-          distance: 0.7
-          address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
-        - id: "123"
-          chainName: "KFC"
-          branchName: "Slipi Kemanggisan"
-          distance: 0.7
-          address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
-        - id: "123"
-          chainName: "KFC"
-          branchName: "Slipi Kemanggisan"
-          distance: 0.7
-          address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
-        - id: "123"
-          chainName: "KFC"
-          branchName: "Slipi Kemanggisan"
-          distance: 0.7
-          address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-          branchStatus: "OPEN"
-          statusLabel: "09.00 - 21.00 (Tuesday)"
+          poiStatus:
+            statusLabel: "Opening again at 11 dec 2019"
+            status: "PERMANENTLY_CLOSED"
+          openHourToday:
+            weekDay: "SUNDAY"
+            operationHours:
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            - closeTime:
+                hour: 7
+                minutes: 0
+              openTime:
+                hour: 7
+                minutes: 0
+            isToday: false
+            closed: false
   BranchItem:
     type: "object"
     required:
@@ -1799,7 +1865,8 @@ definitions:
     - "chainName"
     - "branchName"
     - "address"
-    - "statusLabel"
+    - "poiStatus"
+    - "openHourToday"
     properties:
       id:
         type: "string"
@@ -1816,26 +1883,36 @@ definitions:
       address:
         type: "string"
         example: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
-      branchStatus:
-        type: "string"
-        example: "PERMANENTLY_CLOSED"
-        enum:
-          - "OPEN"
-          - "CLOSED"
-          - "TEMPORARY_CLOSED"
-          - "COMING_SOON"
-          - "PERMANENTLY_CLOSED"
-      statusLabel:
-        type: "string"
-        example: "09.00 - 21.00 (Tuesday)"
+      poiStatus:
+        $ref: "#/definitions/POIStatus"
+      openHourToday:
+        $ref: "#/definitions/OpenHour"
     example:
       id: "123"
       chainName: "KFC"
       branchName: "Slipi Kemanggisan"
       distance: 0.7
       address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"    
-      branchStatus: "OPEN"
-      statusLabel: "09.00 - 21.00 (Tuesday)"
+      poiStatus:
+        statusLabel: "Opening again at 11 dec 2019"
+        status: "PERMANENTLY_CLOSED"
+      openHourToday:
+        weekDay: "SUNDAY"
+        operationHours:
+        - closeTime:
+            hour: 7
+            minutes: 0
+          openTime:
+            hour: 7
+            minutes: 0
+        - closeTime:
+            hour: 7
+            minutes: 0
+          openTime:
+            hour: 7
+            minutes: 0
+        isToday: false
+        closed: false
   SearchResultRequest:
     type: "object"
     required:
@@ -2857,7 +2934,6 @@ definitions:
         clientInterface: "clientInterface"
   GetContextAPIRequest:
     type: "object"
-    required:
     properties:
       data:
         $ref: "#/definitions/GetContextAPIRequestData"
@@ -2908,7 +2984,7 @@ definitions:
         type: "string"
         example: "ADDS730921=="
       sessionExpirationTime:
-        type: "int"
+        type: "integer"
         format: "int64"  
         example: 212210909032
   GetContextAPIResponseNotAuthorized:  
