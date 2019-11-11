@@ -1129,9 +1129,6 @@ definitions:
       name:
         type: "string"
         example: "Chir Chir fusion Chicken"
-      mainImage:
-        type: "string"
-        example: "http://tny.im/jA-"
       bestKnownFor:
         $ref: "#/definitions/BestKnownFor"
       locationInfo:
@@ -1193,7 +1190,6 @@ definitions:
     example: 
       id: "123"
       name: "Chir Chir fusion Chicken"
-      mainImage: "http://tny.im/jA-"
       bestKnownFor:
         description : "The best Restaurant since xxxx"
         tags:
