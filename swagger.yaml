@@ -659,6 +659,8 @@ definitions:
         $ref: "#/definitions/HomePageRequestData"
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
     example:
       data:
         geoLocation:
@@ -670,19 +672,14 @@ definitions:
           id: 0
       context:
         session: "session"
-        clientInterface: "clientInterface"
+      clientInterface: "mobile-android"
   ContextRequest:
     type: "object"
-    required:
-    - "clientInterface"
     properties:
       session:
         type: "string"
-      clientInterface:
-        type: "string"
     example:
       session: "session"
-      clientInterface: "clientInterface"
   ContextResponse:
     type: "object"
     properties:
@@ -690,6 +687,9 @@ definitions:
         type: "string"
     example:
       session: "session"
+  ClientInterface:
+    type: "string"
+    example: "mobile-android"
   HomePageRequestData:
     type: "object"
     properties:
@@ -1475,12 +1475,14 @@ definitions:
         $ref: "#/definitions/POIRequestData"
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
     example:
       data:
         id: "123"
       context:
         session: "session"
-        clientInterface: "clientInterface"
+      clientInterface: "mobile-android"
   LocationRequestData:
     type: "object"
     required:
@@ -1500,12 +1502,14 @@ definitions:
         $ref: "#/definitions/LocationRequestData"
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
     example:
       data:
         query: "slipi"
       context:
         session: "session"
-        clientInterface: "clientInterface"
+      clientInterface: "mobile-android"
   LocationResponseData:
     type: "object"
     required:
@@ -1568,7 +1572,6 @@ definitions:
           label: "Menara Peninsula, Jakarta"
       context:
         session: "session"
-        clientInterface: "clientInterface"
   MultiCurrencyValue:
     type: "object"
     required:
@@ -1597,6 +1600,8 @@ definitions:
         $ref: "#/definitions/ChainDetailRequestData"
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
   ChainDetailRequestData:
     type: "object"
     required:
@@ -1657,6 +1662,8 @@ definitions:
         $ref: "#/definitions/ChainBranchesRequestData"
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
   ChainBranchesRequestData:
     type: "object"
     required:
@@ -1923,6 +1930,8 @@ definitions:
         $ref: "#/definitions/SearchResultRequestData"
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
   SearchResultRequestData:
     type: "object"
     required: 
@@ -2000,10 +2009,12 @@ definitions:
     properties:
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
     example:
       context:
         session: "session"
-        clientInterface: "clientInterface"
+      clientInterface: "mobile-android"
   AvailableFilterResponse:
     type: "object"
     required:
@@ -2479,8 +2490,12 @@ definitions:
         type: "array"
         items:
           type: "string"
+      geoDisplay:
+        $ref: "#/definitions/GeoDisplay"
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
     example:
       data:
         omniSearchTypes:
@@ -2491,9 +2506,13 @@ definitions:
         - "LOCATION"
         - "RESTAURANT_TYPE"
         query: "blahhh blahh"
+        geoDisplay:
+          name: "Jakarta"
+          locationType: "GEO"
+          id: 1
       context:
         session: "session"
-        clientInterface: "clientInterface"
+      clientInterface: "mobile-android"
   OmniSearchResponseItem:
     type: "object"
     properties:
@@ -2613,6 +2632,8 @@ definitions:
         $ref: "#/definitions/GalleryRequestData"
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
   GalleryRequestData:
     type: "object"
     required:
@@ -2731,6 +2752,8 @@ definitions:
         $ref: "#/definitions/GlossaryRequestData"
       context:
         $ref: "#/definitions/ContextRequest"  
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
   GlossaryRequestData:
     type: "object"
     properties:
@@ -2894,6 +2917,8 @@ definitions:
         $ref: "#/definitions/OtherCitiesRequestData"
       context:
         $ref: "#/definitions/ContextRequest"
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
   OtherCitiesRequestData:
     type: "object"
   OtherCitiesResponse:
@@ -2931,7 +2956,6 @@ definitions:
           label: "Bekasi"
       context:
         session: "session"
-        clientInterface: "clientInterface"
   GetContextAPIRequest:
     type: "object"
     properties:
@@ -2939,6 +2963,8 @@ definitions:
         $ref: "#/definitions/GetContextAPIRequestData"
       context:
         $ref: "#/definitions/ContextRequest"  
+      clientInterface:
+        $ref: "#/definitions/ClientInterface"
   GetContextAPIRequestData:
     type: "object"
     properties:
