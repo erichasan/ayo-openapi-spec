@@ -1575,24 +1575,37 @@ definitions:
   MultiCurrencyValue:
     type: "object"
     required:
+    - "currencyValue"
+    - "numOfDecimalPoint"
+    properties:
+      currencyValue:
+        $ref: "#/definitions/CurrencyValue"
+      numOfDecimalPoint:
+        type: "integer"
+        format: "int64"
+        example: "3"
+    example:
+      currencyValue:
+        currency: "IDR"
+        amount: "10000"
+        nullOrEmpty: "false"
+      numOfDecimalPoint: "0"
+  CurrencyValue:
+    type: "object"
+    required:
     - "currency"
     - "amount"
-    - "numOfDecimalPoint"
+    - "nullOrEmpty"
     properties:
       currency:
         type: "string"
         example: "IDR"
       amount:
         type: "number"
-        example: 100000
-      numOfDecimalPoint:
-        type: "integer"
-        format: "int64"
-        example: "3"
-    example:
-      currency: "IDR"
-      amount: 100000
-      numOfDecimalPoint: 0
+        example: "100000"
+      nullOrEmpty:
+        type: "boolean"
+        example: "false"
   ChainDetailRequest:
     type: "object"
     properties: 
@@ -2046,12 +2059,16 @@ definitions:
             label: "4+"
           prices:
             minPrice:
-              currency: "IDR"
-              amount: 10000
+              currencyValue:
+                currency: "IDR"
+                amount: "10000"
+                nullOrEmpty: "false"
               numOfDecimalPoint: 0
             maxPrice:
-              currency: "IDR"
-              amount: 120000
+              currencyValue:
+                currency: "IDR"
+                amount: "500000"
+                nullOrEmpty: "false"
               numOfDecimalPoint: 0
           types:
           - id: "3+"
@@ -2795,13 +2812,17 @@ definitions:
             - "filter"
             prices:
               minPrice:
-                currency: "IDR"
-                amount: 100000
-                numOfDecimalPoint: 0
-              maxPrice: 
-                currency: "IDR"
-                amount: 100000
-                numOfDecimalPoint: 0      
+                currencyValue:
+                  currency: "IDR"
+                  amount: "10000"
+                  nullOrEmpty: "false"
+                numOfDecimalPoint: "0"
+              maxPrice:
+                currencyValue:
+                  currency: "IDR"
+                  amount: "500000"
+                  nullOrEmpty: "false"
+                numOfDecimalPoint: "0"
             types:
             - "filter"
             - "filter"
@@ -2827,13 +2848,17 @@ definitions:
             - "filter"
             prices:
               minPrice:
-                currency: "IDR"
-                amount: 100000
-                numOfDecimalPoint: 0
-              maxPrice: 
-                currency: "IDR"
-                amount: 100000
-                numOfDecimalPoint: 0      
+                currencyValue:
+                  currency: "IDR"
+                  amount: "10000"
+                  nullOrEmpty: "false"
+                numOfDecimalPoint: "0"
+              maxPrice:
+                currencyValue:
+                  currency: "IDR"
+                  amount: "500000"
+                  nullOrEmpty: "false"
+                numOfDecimalPoint: "0"
             types:
             - "filter"
             - "filter"
@@ -2861,13 +2886,17 @@ definitions:
             - "filter"
             prices:
               minPrice:
-                currency: "IDR"
-                amount: 100000
-                numOfDecimalPoint: 0
+                currencyValue:
+                  currency: "IDR"
+                  amount: "10000"
+                  nullOrEmpty: "false"
+                numOfDecimalPoint: "0"
               maxPrice: 
-                currency: "IDR"
-                amount: 100000
-                numOfDecimalPoint: 0      
+                currencyValue:
+                  currency: "IDR"
+                  amount: "500000"
+                  nullOrEmpty: "false"
+                numOfDecimalPoint: "0"
             types:
             - "filter"
             - "filter"
