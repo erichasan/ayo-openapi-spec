@@ -2063,13 +2063,13 @@ definitions:
                 currency: "IDR"
                 amount: "10000"
                 nullOrEmpty: "false"
-              numOfDecimalPoint: 0
+              numOfDecimalPoint: "0"
             maxPrice:
               currencyValue:
                 currency: "IDR"
                 amount: "500000"
                 nullOrEmpty: "false"
-              numOfDecimalPoint: 0
+              numOfDecimalPoint: "0"
           types:
           - id: "3+"
             label: "3+"
