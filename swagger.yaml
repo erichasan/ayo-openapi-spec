@@ -1078,11 +1078,12 @@ definitions:
         example: "PERMANENTLY_CLOSED"
         enum:
         - "OPEN_NOW"
-        - "COMING_SOON"
-        - "TEMPORARILY_CLOSED"
+        - "OPENING_SOON"
+        - "TEMPORARY_CLOSED"
         - "PERMANENTLY_CLOSED"
         - "CLOSED_NOW"
-        - "NO_OPEN_HOUR"
+        - "NO_OPEN_HOURS"
+        - "NOT_AVAILABLE"
       statusLabel:
         type: "string"
         example: "Opening again at 11 dec 2019"
@@ -2237,7 +2238,7 @@ definitions:
           - "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRWYOIXVPIcxuRJDq_BRu-GWh1ru_4LW-NOFE60VJIFAk84obFx"
           poiStatus:
             statusLabel: "Opening again at 11 dec 2019"
-            status: "COMING_SOON"
+            status: "OPENING_SOON"
           openHourToday:
             weekDay: "SUNDAY"
             operationHours:
@@ -2371,7 +2372,7 @@ definitions:
           mainCuisine: "None"
           poiStatus:
             statusLabel: ""
-            status: "NO_OPEN_HOUR"
+            status: "NO_OPEN_HOURS"
           price:
             priceDetail: "price for 1 dish + 1 beverages"
             priceLabel: "Around Rp 30.000 per person"
