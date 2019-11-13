@@ -1587,7 +1587,7 @@ definitions:
       currencyValue:
         currency: "IDR"
         amount: "10000"
-        nullOrEmpty: "false"
+        nullOrEmpty: false
       numOfDecimalPoint: "0"
   CurrencyValue:
     type: "object"
@@ -1600,11 +1600,11 @@ definitions:
         type: "string"
         example: "IDR"
       amount:
-        type: "number"
+        type: "string"
         example: "100000"
       nullOrEmpty:
         type: "boolean"
-        example: "false"
+        example: false
   ChainDetailRequest:
     type: "object"
     properties: 
@@ -2061,13 +2061,13 @@ definitions:
               currencyValue:
                 currency: "IDR"
                 amount: "10000"
-                nullOrEmpty: "false"
+                nullOrEmpty: false
               numOfDecimalPoint: "0"
             maxPrice:
               currencyValue:
                 currency: "IDR"
                 amount: "500000"
-                nullOrEmpty: "false"
+                nullOrEmpty: false
               numOfDecimalPoint: "0"
           types:
           - id: "3+"
@@ -2814,13 +2814,13 @@ definitions:
                 currencyValue:
                   currency: "IDR"
                   amount: "10000"
-                  nullOrEmpty: "false"
+                  nullOrEmpty: false
                 numOfDecimalPoint: "0"
               maxPrice:
                 currencyValue:
                   currency: "IDR"
                   amount: "500000"
-                  nullOrEmpty: "false"
+                  nullOrEmpty: false
                 numOfDecimalPoint: "0"
             types:
             - "filter"
@@ -2850,13 +2850,13 @@ definitions:
                 currencyValue:
                   currency: "IDR"
                   amount: "10000"
-                  nullOrEmpty: "false"
+                  nullOrEmpty: false
                 numOfDecimalPoint: "0"
               maxPrice:
                 currencyValue:
                   currency: "IDR"
                   amount: "500000"
-                  nullOrEmpty: "false"
+                  nullOrEmpty: false
                 numOfDecimalPoint: "0"
             types:
             - "filter"
@@ -2888,13 +2888,13 @@ definitions:
                 currencyValue:
                   currency: "IDR"
                   amount: "10000"
-                  nullOrEmpty: "false"
+                  nullOrEmpty: false
                 numOfDecimalPoint: "0"
               maxPrice: 
                 currencyValue:
                   currency: "IDR"
                   amount: "500000"
-                  nullOrEmpty: "false"
+                  nullOrEmpty: false
                 numOfDecimalPoint: "0"
             types:
             - "filter"
