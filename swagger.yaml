@@ -2688,6 +2688,7 @@ definitions:
     example:
       data:
         restaurantName: "Chir Chir Korean Fusion Chicken"
+        restaurantImage: "http://tny.im/jA-"
         highlightedLocation: "PIK Jakarta"
         galleryItems:
         - category: "FOOD"
