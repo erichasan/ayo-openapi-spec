@@ -1731,7 +1731,7 @@ definitions:
         - id: "123"
           chainName: "KFC"
           branchName: "Slipi Kemanggisan"
-          distance: 0.7
+          distance: "0.7 km"
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
           poiStatus:
             statusLabel: "Opening again at 11 dec 2019"
@@ -1756,7 +1756,7 @@ definitions:
         - id: "123"
           chainName: "KFC"
           branchName: "Palmerah, Jakarta"
-          distance: 0.3
+          distance: "0.3 km"
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
           poiStatus:
             statusLabel: "Opening again at 11 dec 2019"
@@ -1781,7 +1781,7 @@ definitions:
         - id: "123"
           chainName: "KFC"
           branchName: "Kuningan, Jakarta"
-          distance: 0.7
+          distance: "0.7 km"
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
           poiStatus:
             statusLabel: "Opening again at 11 dec 2019"
@@ -1806,7 +1806,7 @@ definitions:
         - id: "123"
           chainName: "KFC"
           branchName: "Monas, Jakarta"
-          distance: 0.7
+          distance: "0.7 km"
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
           poiStatus:
             statusLabel: "Opening again at 11 dec 2019"
@@ -1831,7 +1831,7 @@ definitions:
         - id: "123"
           chainName: "KFC"
           branchName: "Cental Park, Jakarta"
-          distance: 0.7
+          distance: "0.7 km"
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
           poiStatus:
             statusLabel: "Opening again at 11 dec 2019"
@@ -1856,7 +1856,7 @@ definitions:
         - id: "123"
           chainName: "KFC"
           branchName: "Gandaria City, Jakarta"
-          distance: 0.7
+          distance: "0.7 km"
           address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
           poiStatus:
             statusLabel: "Opening again at 11 dec 2019"
@@ -1898,8 +1898,8 @@ definitions:
         type: "string"
         example: "Slipi Kemanggisan"
       distance:
-        type: "number"
-        example: 0.7
+        type: "string"
+        example: "0.7 km"
       address:
         type: "string"
         example: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"
@@ -1911,7 +1911,7 @@ definitions:
       id: "123"
       chainName: "KFC"
       branchName: "Slipi Kemanggisan"
-      distance: 0.7
+      distance: "0.7 km"
       address: "SPBU Shell, Jl. Raya S. Parman Kav 38-39, Slipi, Jakarta"    
       poiStatus:
         statusLabel: "Opening again at 11 dec 2019"
@@ -2259,7 +2259,7 @@ definitions:
           price:
             priceDetail: "price for 1 dish + 1 beverages"
             priceLabel: "Around Rp 100.000 per person"
-          distance: 0.7
+          distance: "0.7 km"
           address: "Senopati, Jakarta Selatan"
           menu: 
             - imagerUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKZolakgBBi8uWDRlsDANrm4yFy93CSn1cjnTMWwxCVW_A_WYZ"
@@ -2327,7 +2327,7 @@ definitions:
           price:
             priceDetail: "price for 1 dish + 1 beverages"
             priceLabel: "Around Rp 2.000.000 per person"
-          distance: 0.1
+          distance: "0.1 km"
           address: "Teluk Gong, Jakarta, Indonesia"  
           label:
           - "New" 
@@ -2432,7 +2432,7 @@ definitions:
         $ref: "#/definitions/Price"
       distance:
         type: "number"
-        example: 0.7
+        example: "0.7 km"
       address:
         type: "string"
         example: "Plaza Indonesia Mall, Lt 3"
@@ -2479,7 +2479,7 @@ definitions:
       price:
         priceDetail: "price for 1 dish + 1 beverages"
         priceLabel: "Around Rp 100.000 per person"
-      distance: 0.7
+      distance: "0.7 km"
       address: "Senopati, Jakarta Selatan"
       menu: 
         - imagerUrl: "http://tny.im/jA-"
