@@ -2431,7 +2431,7 @@ definitions:
       price:
         $ref: "#/definitions/Price"
       distance:
-        type: "number"
+        type: "string"
         example: "0.7 km"
       address:
         type: "string"
